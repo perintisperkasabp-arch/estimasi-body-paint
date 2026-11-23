@@ -1,6 +1,6 @@
 // Service worker: makes the app open offline and installable.
-const CACHE = 'estimasi-bp-71dfbe7c';
-const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png'];
+const CACHE = 'estimasi-bp-0fa9fc58';
+const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png', './vendor/jspdf.umd.min.js', './vendor/jspdf.plugin.autotable.min.js'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
